@@ -12,24 +12,52 @@
             background-color: #000;
             color: #fff;
         }
+
         .text-pink-400 {
             color: #f472b6;
         }
+
         .transition-transform {
             transition: transform 0.3s ease-in-out;
         }
+
         .hover-transform:hover {
             transform: scale(1.05);
         }
+
         .animate__animated {
             animation-duration: 1s;
         }
+
         .animate__fadeIn {
             animation-name: fadeIn;
         }
+
         @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Zoom-in Effect */
+        .zoom-in {
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .zoom-in:hover {
+            transform: scale(1.1);
+        }
+
+        /* Centered Box Styling */
+        .centered-box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
         }
     </style>
 </head>
@@ -44,6 +72,7 @@
                 <li><a href="#about" class="hover:text-pink-400 transition-transform">About Me</a></li>
                 <li><a href="#skills" class="hover:text-pink-400 transition-transform">Skills</a></li>
                 <li><a href="#projects" class="hover:text-pink-400 transition-transform">Projects</a></li>
+                <li><a href="#certifications" class="hover:text-pink-400 transition-transform">Certifications</a></li>
                 <li><a href="#extracurriculars" class="hover:text-pink-400 transition-transform">Extracurriculars</a></li>
                 <li><a href="#contact" class="hover:text-pink-400 transition-transform">Contact</a></li>
             </ul>
@@ -51,8 +80,8 @@
     </nav>
 
     <!-- Hero Section -->
-    <section id="home" class="py-20 text-center">
-        <div class="container mx-auto">
+    <section id="home" class="py-20 text-center perspective-container">
+        <div class="container mx-auto zoom-in">
             <h1 class="text-5xl font-bold text-pink-400">Sucharitha Bobba</h1>
             <p class="text-xl mt-4">B.Tech CSE | Aspiring Web Developer | GITAM University, Hyderabad</p>
             <p class="text-lg mt-2">Skilled in <span class="text-pink-400">HTML</span>, <span class="text-pink-400">JavaScript</span>, <span class="text-pink-400">Python</span>, and <span class="text-pink-400">CSS</span>. Eager to learn and innovate.</p>
@@ -61,8 +90,8 @@
     </section>
 
     <!-- About Me Section -->
-    <section id="about" class="py-12 bg-gray-800">
-        <div class="container mx-auto text-center">
+    <section id="about" class="py-12 bg-gray-800 perspective-container">
+        <div class="container mx-auto text-center zoom-in">
             <h2 class="text-4xl font-bold mb-8 text-pink-400">About Me</h2>
             <p class="text-lg mb-6">As a dedicated B.Tech CSE student at GITAM University, Hyderabad, I am passionate about transforming innovative ideas into stunning web solutions. With excellent communication skills, a keen eye for detail, and a strong ability to work collaboratively, I thrive in team settings and excel at learning new technologies.</p>
             <p class="text-lg mb-6">Outside academics, I actively contribute as an Executive Board Member of Media for the Esports Club Hyderabad and have participated in Parichay 2k23. My diverse experiences fuel my enthusiasm for creating impactful web applications and my drive for continuous growth.</p>
@@ -70,20 +99,23 @@
     </section>
 
     <!-- Skills Section -->
-    <section id="skills" class="py-12">
+    <section id="skills" class="py-12 perspective-container">
         <div class="container mx-auto text-center">
             <h2 class="text-4xl font-bold mb-8 text-pink-400">Skills</h2>
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
-                <div class="bg-gray-800 shadow-md p-6 rounded-lg hover:shadow-lg transition-transform hover-transform">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-gray-800 shadow-md p-6 rounded-lg zoom-in">
                     <p class="text-lg font-bold text-pink-400">HTML5</p>
                 </div>
-                <div class="bg-gray-800 shadow-md p-6 rounded-lg hover:shadow-lg transition-transform hover-transform">
+                <div class="bg-gray-800 shadow-md p-6 rounded-lg zoom-in">
                     <p class="text-lg font-bold text-pink-400">JavaScript</p>
                 </div>
-                <div class="bg-gray-800 shadow-md p-6 rounded-lg hover:shadow-lg transition-transform hover-transform">
+                <div class="bg-gray-800 shadow-md p-6 rounded-lg zoom-in">
                     <p class="text-lg font-bold text-pink-400">Python</p>
                 </div>
-                <div class="bg-gray-800 shadow-md p-6 rounded-lg hover:shadow-lg transition-transform hover-transform">
+                <div class="bg-gray-800 shadow-md p-6 rounded-lg zoom-in centered-box">
+                    <p class="text-lg font-bold text-pink-400">Familiar with Tools: MS Excel, VS Code, MS PowerPoint</p>
+                </div>
+                <div class="bg-gray-800 shadow-md p-6 rounded-lg zoom-in">
                     <p class="text-lg font-bold text-pink-400">CSS3</p>
                 </div>
             </div>
@@ -91,38 +123,49 @@
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="py-12 bg-gray-800">
-        <div class="container mx-auto text-center">
+    <section id="projects" class="py-12 bg-gray-800 perspective-container">
+        <div class="container mx-auto text-center zoom-in">
             <h2 class="text-4xl font-bold mb-8 text-pink-400">Projects</h2>
-            <div class="bg-gray-700 shadow-md p-6 rounded-lg hover:shadow-lg transition-transform hover-transform">
+            <div class="bg-gray-700 shadow-md p-6 rounded-lg zoom-in">
                 <h3 class="text-2xl font-bold text-pink-400 mb-2">Portfolio Website</h3>
                 <p class="text-lg">A personal portfolio website developed using HTML, CSS, and JavaScript to showcase my skills, projects, and experiences. This project demonstrates my ability to create visually appealing and functional web pages.</p>
             </div>
         </div>
     </section>
 
+    <!-- Certifications Section -->
+    <section id="certifications" class="py-12 perspective-container">
+        <div class="container mx-auto text-center zoom-in">
+            <h2 class="text-4xl font-bold mb-8 text-pink-400">Certifications</h2>
+            <p class="text-lg mb-6">All certifications below were obtained from Coursera:</p>
+            <ul class="list-none zoom-in">
+                <li class="text-lg mb-4">Organisational Behaviour: Know Your People - Macquarie University, Aug 2023</li>
+                <li class="text-lg mb-4">Organisational Design: Know Your Organisation - Macquarie University, Oct 2023</li>
+                <li class="text-lg mb-4">Organizational Behavior: How to Manage People - IESE Business School, Sep 2023</li>
+                <li class="text-lg mb-4">Action-Driven Business Plan: From the ‘Classroom’ to the World - Technion, Oct 2023</li>
+                <li class="text-lg mb-4">Technical Support Fundamentals - Google, Oct 2023</li>
+                <li class="text-lg mb-4">Effective Problem-Solving and Decision-Making - University of California, Irvine, May 2023</li>
+                <li class="text-lg mb-4">Logic for Economists - University of Amsterdam, May 2023</li>
+            </ul>
+        </div>
+    </section>
+
     <!-- Extracurriculars Section -->
-    <section id="extracurriculars" class="py-12">
-        <div class="container mx-auto text-center">
+    <section id="extracurriculars" class="py-12 bg-gray-800 perspective-container">
+        <div class="container mx-auto text-center zoom-in">
             <h2 class="text-4xl font-bold mb-8 text-pink-400">Extracurriculars</h2>
             <p class="text-lg">As an Executive Board Member of Media for the Esports Club Hyderabad, I manage media-related tasks, including content creation and event promotion. Additionally, my participation in Parichay 2k23 has developed my organizational and leadership skills, allowing me to excel in dynamic environments.</p>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="bg-gray-900 py-12">
-        <div class="container mx-auto text-center">
+    <section id="contact" class="bg-gray-900 py-12 perspective-container">
+        <div class="container mx-auto text-center zoom-in">
             <h2 class="text-4xl font-bold mb-8 text-pink-400">Get in Touch</h2>
-            <p class="text-lg mb-6">I'm currently seeking opportunities in web development. If you're looking for a dedicated developer with strong skills in HTML, JavaScript, Python, and CSS, and someone who is enthusiastic about learning and teamwork, feel free to reach out!</p>
-            <a href="mailto:sucharithabobba7@gmail.com" class="bg-pink-500 text-white mt-4 inline-block px-8 py-4 rounded-full font-bold hover:bg-pink-400 transition-transform">Contact Me</a>
-            <p class="text-lg mt-2">Email: <a href="mailto:sucharithabobba7@gmail.com" class="text-pink-400 hover:underline">sucharithabobba7@gmail.com</a></p>
+            <p class="text-lg mb-6">I'm currently seeking opportunities in web development. If you're looking for a dedicated and skilled developer, feel free to contact me at:</p>
+            <p class="text-lg font-bold text-pink-400">Sucharithabobba7@gmail.com</p>
         </div>
     </section>
-
-    <!-- Footer -->
-    <footer class="bg-gray-900 text-white p-6 text-center">
-        <p>&copy; 2024 Sucharitha Bobba | All Rights Reserved</p>
-    </footer>
 
 </body>
 
