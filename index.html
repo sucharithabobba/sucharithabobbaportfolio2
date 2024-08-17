@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sucharitha Bobba | Portfolio</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@latest/dist/tailwind.min.css">
+    <script src="app.js" defer></script>
+    <style>
+        body {
+            background-color: #000;
+            color: #fff;
+        }
+        .text-pink-400 {
+            color: #f472b6;
+        }
+        .transition-transform {
+            transition: transform 0.3s ease-in-out;
+        }
+        .hover-transform:hover {
+            transform: scale(1.05);
+        }
+        .animate__animated {
+            animation-duration: 1s;
+        }
+        .animate__fadeIn {
+            animation-name: fadeIn;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="bg-gray-900 shadow-md py-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="#home" class="text-2xl font-bold text-pink-400 hover:text-pink-300 transition-transform">Sucharitha Bobba</a>
+            <ul class="flex space-x-8 text-gray-400">
+                <li><a href="#about" class="hover:text-pink-400 transition-transform">About Me</a></li>
+                <li><a href="#skills" class="hover:text-pink-400 transition-transform">Skills</a></li>
+                <li><a href="#projects" class="hover:text-pink-400 transition-transform">Projects</a></li>
+                <li><a href="#extracurriculars" class="hover:text-pink-400 transition-transform">Extracurriculars</a></li>
+                <li><a href="#contact" class="hover:text-pink-400 transition-transform">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="py-20 text-center">
+        <div class="container mx-auto">
+            <h1 class="text-5xl font-bold text-pink-400">Sucharitha Bobba</h1>
+            <p class="text-xl mt-4">B.Tech CSE | Aspiring Web Developer | GITAM University, Hyderabad</p>
+            <p class="text-lg mt-2">Skilled in <span class="text-pink-400">HTML</span>, <span class="text-pink-400">JavaScript</span>, <span class="text-pink-400">Python</span>, and <span class="text-pink-400">CSS</span>. Eager to learn and innovate.</p>
+            <a href="#contact" class="mt-8 inline-block bg-pink-500 text-white font-bold px-8 py-4 rounded-full hover:bg-pink-400 transition-transform">Hire Me</a>
+        </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about" class="py-12 bg-gray-800">
+        <div class="container mx-auto text-center">
+            <h2 class="text-4xl font-bold mb-8 text-pink-400">About Me</h2>
+            <p class="text-lg mb-6">As a dedicated B.Tech CSE student at GITAM University, Hyderabad, I am passionate about transforming innovative ideas into stunning web solutions. With excellent communication skills, a keen eye for detail, and a strong ability to work collaboratively, I thrive in team settings and excel at learning new technologies.</p>
+            <p class="text-lg mb-6">Outside academics, I actively contribute as an Executive Board Member of Media for the Esports Club Hyderabad and have participated in Parichay 2k23. My diverse experiences fuel my enthusiasm for creating impactful web applications and my drive for continuous growth.</p>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-12">
+        <div class="container mx-auto text-center">
+            <h2 class="text-4xl font-bold mb-8 text-pink-400">Skills</h2>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+                <div class="bg-gray-800 shadow-md p-6 rounded-lg hover:shadow-lg transition-transform hover-transform">
+                    <p class="text-lg font-bold text-pink-400">HTML5</p>
+                </div>
+                <div class="bg-gray-800 shadow-md p-6 rounded-lg hover:shadow-lg transition-transform hover-transform">
+                    <p class="text-lg font-bold text-pink-400">JavaScript</p>
+                </div>
+                <div class="bg-gray-800 shadow-md p-6 rounded-lg hover:shadow-lg transition-transform hover-transform">
+                    <p class="text-lg font-bold text-pink-400">Python</p>
+                </div>
+                <div class="bg-gray-800 shadow-md p-6 rounded-lg hover:shadow-lg transition-transform hover-transform">
+                    <p class="text-lg font-bold text-pink-400">CSS3</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-12 bg-gray-800">
+        <div class="container mx-auto text-center">
+            <h2 class="text-4xl font-bold mb-8 text-pink-400">Projects</h2>
+            <div class="bg-gray-700 shadow-md p-6 rounded-lg hover:shadow-lg transition-transform hover-transform">
+                <h3 class="text-2xl font-bold text-pink-400 mb-2">Portfolio Website</h3>
+                <p class="text-lg">A personal portfolio website developed using HTML, CSS, and JavaScript to showcase my skills, projects, and experiences. This project demonstrates my ability to create visually appealing and functional web pages.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Extracurriculars Section -->
+    <section id="extracurriculars" class="py-12">
+        <div class="container mx-auto text-center">
+            <h2 class="text-4xl font-bold mb-8 text-pink-400">Extracurriculars</h2>
+            <p class="text-lg">As an Executive Board Member of Media for the Esports Club Hyderabad, I manage media-related tasks, including content creation and event promotion. Additionally, my participation in Parichay 2k23 has developed my organizational and leadership skills, allowing me to excel in dynamic environments.</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="bg-gray-900 py-12">
+        <div class="container mx-auto text-center">
+            <h2 class="text-4xl font-bold mb-8 text-pink-400">Get in Touch</h2>
+            <p class="text-lg mb-6">I'm currently seeking opportunities in web development. If you're looking for a dedicated developer with strong skills in HTML, JavaScript, Python, and CSS, and someone who is enthusiastic about learning and teamwork, feel free to reach out!</p>
+            <a href="mailto:sucharithabobba7@gmail.com" class="bg-pink-500 text-white mt-4 inline-block px-8 py-4 rounded-full font-bold hover:bg-pink-400 transition-transform">Contact Me</a>
+            <p class="text-lg mt-2">Email: <a href="mailto:sucharithabobba7@gmail.com" class="text-pink-400 hover:underline">sucharithabobba7@gmail.com</a></p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white p-6 text-center">
+        <p>&copy; 2024 Sucharitha Bobba | All Rights Reserved</p>
+    </footer>
+
+</body>
+
+</html>
