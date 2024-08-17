@@ -1,36 +1,44 @@
-// JavaScript to handle any dynamic features, animations, or interactivity
-
-document.addEventListener("DOMContentLoaded", function() {
-    // Example dynamic content loading (if needed)
-    console.log("Portfolio website loaded successfully!");
-    
-    // Smooth scroll to sections
-    const navLinks = document.querySelectorAll("nav ul li a");
-    navLinks.forEach(link => {
-        link.addEventListener("click", function(e) {
-            e.preventDefault();
-            const targetSection = document.querySelector(this.getAttribute("href"));
-            targetSection.scrollIntoView({ behavior: "smooth" });
-        });
+document.addEventListener("DOMContentLoaded", () => {
+  // Smooth scrolling for anchor links
+  const links = document.querySelectorAll('a[href^="#"]');
+  for (const link of links) {
+    link.addEventListener("click", function (e) {
+      e.preventDefault();
+      const target = document.querySelector(this.getAttribute("href"));
+      target.scrollIntoView({
+        behavior: "smooth",
+      });
     });
+  }
 
-    // Animation on scroll
-    const sections = document.querySelectorAll("section");
-    const options = {
-        threshold: 0.1
-    };
-    
-    const observer = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add("animate__animated", "animate__fadeIn");
-            } else {
-                entry.target.classList.remove("animate__animated", "animate__fadeIn");
-            }
-        });
-    }, options);
-    
-    sections.forEach(section => {
-        observer.observe(section);
+  // Add zoom-in effect on hover for specified sections
+  const zoomElements = document.querySelectorAll(".zoom-in");
+  zoomElements.forEach((element) => {
+    element.addEventListener("mouseover", () => {
+      element.style.transform = "scale(1.1)";
     });
+    element.addEventListener("mouseout", () => {
+      element.style.transform = "scale(1)";
+    });
+  });
+
+  // Reveal animations on scroll
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("animate__fadeIn", "animate__animated");
+        } else {
+          entry.target.classList.remove("animate__fadeIn", "animate__animated");
+        }
+      });
+    },
+    { threshold: 0.1 }
+  );
+
+  // Select all sections to animate on scroll
+  const sections = document.querySelectorAll("section");
+  sections.forEach((section) => {
+    observer.observe(section);
+  });
 });
